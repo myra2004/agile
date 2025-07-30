@@ -4,7 +4,16 @@ from sqlalchemy import engine_from_config, pool
 
 from alembic import context
 from app.db import DB_URL, Base
-from app.models import *
+from app.models import (
+    User,
+    Project,
+    ProjectMember,
+    Task,
+    Status,
+    Comment,
+    Notification,
+    AuditLog
+    )
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.

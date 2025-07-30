@@ -14,7 +14,7 @@ dependencies = [
     "python-jose[cryptography]>=3.5.0",
     "ruff>=0.12.4",
     "sqlalchemy>=2.0.41",
-    "starlette-admin>=0.15.1",
+    "starlette-admin>=0.15.0",
 ]
 
 
@@ -34,7 +34,7 @@ lint.ignore = [
 ]
 
 # Paths to exclude
-exclude = ["migrations", "__pycache__", ".venv"]
+exclude = ["migrations", "__pycache__", ".venv", "alembic"]
 
 [tool.ruff.format]
 quote-style = "double"

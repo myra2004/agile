@@ -4,6 +4,8 @@ from fastapi.staticfiles import StaticFiles
 
 from app.admin.settings import admin
 from app.routers.auth import router as auth_router
+from app.routers.projects import router as projects_router
+from app.routers.tasks import router as tasks_router
 from app.settings import MEDIA_DIR, MEDIA_URL
 
 app = FastAPI()
@@ -14,7 +16,9 @@ async def hello():
     return {"detail": "Hello World!"}
 
 
-app.include_router(auth_router, tags=["auth"])
+app.include_router(auth_router)
+app.include_router(projects_router)
+app.include_router(tasks_router)
 
 
 def custom_openapi():

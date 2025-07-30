@@ -11,7 +11,7 @@ from app.admin.views import (
     TaskAdminView,
     UserAdminView,
 )
-from app.db import engine
+from app.database import engine
 from app.models import (
     AuditLog,
     Comment,
@@ -25,7 +25,7 @@ from app.models import (
 
 admin = Admin(
     engine=engine,
-    title="Bookla Admin",
+    title="Agile Admin",
     base_url="/admin",
     auth_provider=JSONAuthProvider(login_path="/login", logout_path="/logout"),
 )
